@@ -23,6 +23,7 @@ public class BooleanSearchEngine implements SearchEngine {
     public List<PageEntry> search(String searchWord) {
         // тут реализуйте поиск по слову
         String word = searchWord.toLowerCase();
+//        System.out.println(searchWord + " = " + word);
 
         if (!allWords.contains(word)) {
             return Collections.emptyList();

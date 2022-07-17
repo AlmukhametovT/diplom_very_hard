@@ -34,10 +34,11 @@ public class Server {
                         return;
                     }
 
-                    if (!engine.getAllWords().contains(knock)) {
+                    if (!engine.getAllWords().contains(knock.toLowerCase())) {
                         out.println("Указанное слово не содержится среди pdf-файлов!");
                     }
 
+                    System.out.println(listToJson(engine.search(knock)));
                     out.println(listToJson(engine.search(knock)));
                 }
             }
@@ -53,7 +54,7 @@ public class Server {
         GsonBuilder builder = new GsonBuilder();
 //        Gson gson = builder.setPrettyPrinting().create();
         Gson gson = builder.create();
-        String json = gson.toJson(pageEntryList, listType);
+        String json = gson.toJson(pageEntryList); //, listType);
         return json;
     }
 }
