@@ -94,8 +94,4 @@ public class BooleanSearchEngine implements SearchEngine {
     public Set<String> getAllWords() {
         return allWords;
     }
-
-    public Map<String, List<PageEntry>> getSearchResult() {
-        return searchResult;
-    }
 }

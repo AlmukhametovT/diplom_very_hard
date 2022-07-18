@@ -9,18 +9,6 @@ public class PageEntry implements Comparable<PageEntry> {
         this.count = count;
     }
 
-    public String getPdfName() {
-        return pdfName;
-    }
-
-    public int getPage() {
-        return page;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
     @Override
     public int compareTo(PageEntry o) {
         return Long.compare(o.count, this.count);

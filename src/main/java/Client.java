@@ -28,11 +28,26 @@ public class Client {
                 }
 
                 out.println(input);
-                System.out.println(in.readLine());
+//                String answer = in.readLine();
+//                printPrettyJson(answer);
+//                System.out.println(answer);
+                in.lines().forEach(System.out::println);
+
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+
+//    public static void printPrettyJson (String answer) {
+//        JSONParser parser = new JSONParser();
+//        try {
+//            Object obj = parser.parse(answer);
+//            JSONObject jsonObject = (JSONObject) obj;
+//            System.out.println(jsonObject);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
